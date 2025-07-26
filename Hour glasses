@@ -1,0 +1,12 @@
+int hourglassSum(int arr_rows, int arr_columns, int** arr) {
+int i,j,s,a,b,max=INT_MIN;
+for(a=0;a<4;a++){
+    for(b=0;b<4;b++){
+        s=0;  
+for(i=a;i<a+3;i++){
+    for(j=b;j<b+3;j++){
+        if(i==a+1 && (j==b ||j==b+2))
+           continue;
+        s=s+arr[i][j];
+    }
+}
