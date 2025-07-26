@@ -1,0 +1,10 @@
+SinglyLinkedListNode* insertNodeAtHead(SinglyLinkedListNode* llist, int data) {
+ SinglyLinkedListNode *nn,*i=llist;
+ nn=malloc(sizeof(SinglyLinkedListNode));
+ nn->data=data;
+ nn->next=NULL;
+ nn->next=llist;
+ llist=nn;
+
+return llist;
+}
