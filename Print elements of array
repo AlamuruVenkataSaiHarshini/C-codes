@@ -1,0 +1,10 @@
+void printLinkedList(SinglyLinkedListNode* head) {
+    SinglyLinkedListNode *i=head;
+    while(i!=NULL)
+    {
+        printf("%d\n",i->data);
+        i=i->next;
+    }
+
+
+}
