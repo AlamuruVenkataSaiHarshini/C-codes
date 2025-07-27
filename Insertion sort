@@ -1,0 +1,17 @@
+void insertionSort1(int n, int arr_count, int* arr) {
+    int temp =arr[n-1],i,k;
+    for(i=n-2;i>=0;i--)
+ {
+    if(temp<arr[i])
+        arr[i+1]=arr[i];
+    else
+        break;
+    for(k=0;k<n;k++)
+      printf("%d ",arr[k]);   
+    printf("\n");   
+ }
+   arr[i+1]=temp;
+   for(k=0;k<n;k++)
+   printf("%d ",arr[k]);
+   printf("\n");
+   }
