@@ -1,0 +1,7 @@
+int* countingSort(int arr_count, int* arr, int* result_count) {
+static int c[100]={0},i;
+for(i=0;i<arr_count;i++)
+    c[arr[i]]++;
+*result_count=100;
+return c;
+}
