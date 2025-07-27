@@ -1,0 +1,21 @@
+void insertionSort2(int n, int arr_count, int* arr) {
+    int i,j,t,k;
+    for(i=1;i<n;i++)
+    {
+        for(j=i;j>=0;j--)
+        {
+         if(arr[j]<arr[j-1])
+         {
+            t=arr[j];
+            arr[j]=arr[j-1];
+            arr[j-1]=t;
+         }   
+         else 
+           break;
+        }
+        for(k=0;k<n;k++)
+         printf("%d ",arr[k]);
+         printf("\n");
+    }
+
+}
