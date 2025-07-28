@@ -1,0 +1,32 @@
+static char st[1000];
+static int top;
+void push(char ch)
+{
+   st[++top]=ch;
+}
+char pop()
+{
+    return st[top--];
+}
+char* isBalanced(char* s) {
+    top=-1;
+    for(int i=0;i<strlen(s);i++)
+    {
+        if (s[i]=='(' || s[i]=='{' ||  s[i]=='[')
+            push(s[i]);
+        else{
+            if (top==-1)
+                return "NO";
+            char val=pop();
+            if (s[i]==')' && val!='(' )
+              return "NO";
+            else if (s[i]=='}' && val!='{')
+               return "NO";
+            else if (s[i]==']' && val!='[')
+              return "NO";
+        }}
+        if(top==-1)
+         return "YES";
+        else 
+          return "NO";
+        }
