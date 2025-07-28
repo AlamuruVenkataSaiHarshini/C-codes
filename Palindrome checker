@@ -1,0 +1,42 @@
+static char st[1000];
+static int top;
+void push(char ch)
+{
+   st[++top]=ch;
+}
+char pop()
+{
+    return st[top--];
+}
+char* isBalanced(char* s) {
+    top=-1;
+    for(int i=0;i<strlen(s);i++)
+    {
+        push(s[i]); 
+    }
+    for(int i=0;i<strlen(s);i++)
+     {
+        if (s[i]!=pop())
+            return "NO";
+     }
+     return "YES";
+
+}
+int main()
+{
+    FILE* fptr = fopen(getenv("OUTPUT_PATH"), "w");
+
+    int t = parse_int(ltrim(rtrim(readline())));
+
+    for (int t_itr = 0; t_itr < t; t_itr++) {
+        char* s = readline();
+
+        char* result = isBalanced(s);
+
+        fprintf(fptr, "%s\n", result);
+    }
+
+    fclose(fptr);
+
+    return 0;
+}
